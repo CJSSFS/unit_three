@@ -1,43 +1,51 @@
 import turtle
-turtle.speed(10)
+
+
 
 def side_length():
-    length = input("What is the length of the cross?")
-    return float(length)
+    side = input("What is the length of the cross?")
+    return float(side)
 
 
 def fill_color():
-    fill_color = input("What color is the cross?")
+     color = input("What color is the cross?")
+    turtle.begin_fill
     return fill_color
 
 
-def draw_a_cross(side):
-    turtle.forward(length)
-    turtle.right(90)
-    turtle.forward(40)
-    turtle.left(90)
-    turtle.forward(40)
-    turtle.right(90)
-    turtle.forward(40)
-    turtle.right(90)
-    turtle.forward(40)
-    turtle.left(90)
-    turtle.forward(40)
-    turtle.right(90)
-    turtle.forward(40)
-    turtle.right(90)
-    turtle.forward(40)
-    turtle.left(90)
-    turtle.forward(40)
-    turtle.right(90)
-    turtle.forward(40)
-    turtle.right(90)
-    turtle.forward(40)
-    turtle.left(90)
-    turtle.forward(40)
+def draw_a_cross(side, color):
+    for x in range(2):
+        turtle.forward(side)
+        turtle.right(90)
+        turtle.forward(side)
+        turtle.left(90)
+        turtle.forward(side)
+        turtle.right(90)
+        turtle.forward(side)
+        turtle.right(90)
+        turtle.forward(side)
+        turtle.left(90)
+        turtle.forward(side)
+        turtle.right(90)
+        turtle.forward(side)
+        turtle.right(90)
+        turtle.forward(side)
+        turtle.left(90)
+        turtle.forward(side)
+        turtle.right(90)
+        turtle.forward(side)
+        turtle.right(90)
+        turtle.forward(side)
+        turtle.left(90)
+        turtle.forward(side)
 
+def move(x,y):
+    turtle.up()
 
-draw_a_cross(100)
+def main():
+    length = side_length()
+    draw_a_cross(length)
 
-turtle.exitonclick()
+    turtle.exitonclick()
 
+main()
